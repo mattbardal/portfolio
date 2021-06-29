@@ -1,0 +1,45 @@
+.projects {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    padding-top: 25px;
+}
+
+.project {
+    background: white;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.tags {
+    padding-top: 35px; /* not sure if I still need this... */
+    display: flex;
+    flex-direction: row;
+}
+
+#tag {
+    background: #EB5E55;
+    color: white;
+    border-radius: 8px;
+    margin-right: 15px;
+    padding: 5px 10px 5px 10px;
+}
+
+#learn-more {
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+#learn-more:hover {
+    cursor: pointer;
+}
+
+#body {
+    padding-right: 25px;
+}
+
+#project-img {
+    width: 200px;
+    padding: 25px;
+    float: left;
+}

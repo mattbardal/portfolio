@@ -34,7 +34,7 @@ class App extends Component {
                     </BrowserRouter>
                 </header>
                 <footer id="footer">
-                    built with React.
+                    &copy; 2021 Matt Bardal
                 </footer>
             </div>
         );

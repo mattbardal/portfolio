@@ -41,7 +41,7 @@ class Navigation extends Component {
                     </div>
                 </div>
                 <nav>
-                    <div id="nav-icon3" class="span-icon" onClick={this.handleClick}>
+                    <div id="nav-icon3" className="span-icon" onClick={this.handleClick}>
                         <span class="span-icon"></span>
                         <span class="span-icon"></span>
                         <span class="span-icon"></span>
