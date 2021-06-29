@@ -1,0 +1,16 @@
+/* BODY */
+
+body {
+  background-color: #829191;
+  font-family: 'Ubuntu Mono', serif;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 16px;
+  color: #FFFFFF;
+  bottom: 0;               
+  text-align: center;
+}
