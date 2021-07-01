@@ -39,7 +39,7 @@ const Project = ({img, img_alt, title, subtitle, body, tags, button_redirect, id
                 {tags.map((tag) => (
                     <div id="tag">{tag}</div>
                 ))} 
-                <button id="learn-more">Learn More</button>
+                <button id="learn-more">Learn More -></button>
             </div>
         </div>
     );
