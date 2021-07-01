@@ -6,9 +6,10 @@
 }
 
 .project {
-    background: white;
+    background: #FFFAFF;
     overflow: hidden;
     margin-bottom: 15px;
+    border-radius: 15px;
 }
 
 .tags {
@@ -18,7 +19,7 @@
 }
 
 #tag {
-    background: #EB5E55;
+    background: #BA3B46;
     color: white;
     border-radius: 8px;
     margin-right: 15px;
