@@ -1,6 +1,4 @@
-import React from 'react';
-import '../../fonts.css';
-import './Projects.css'
+/*import React from 'react';
 import astrosamurai_logo from "./assets/astrosamurai_logo.png";
 import planit_logo from './assets/planit_logo.png'
 
@@ -45,4 +43,4 @@ const Project = ({img, img_alt, title, subtitle, body, tags, button_redirect, id
     );
 }
 
-export default Projects;
+export default Projects; */

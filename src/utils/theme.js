@@ -10,14 +10,17 @@ const theme = extendTheme({
         body: {
           bg: "gray.400",
           color: "white",
-          width: "1000px",
           marginLeft: "auto",
-          marginRight: "auto"
+          marginRight: "auto",
+          overflow: "hidden",
         },
         // styles for the `a`
         a: {
           color: "white",
-        },
+          _hover: {
+            color: "gray.700",
+          },
+        }
       },
     },
 })
