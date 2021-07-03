@@ -3,6 +3,8 @@ import Terminal from 'terminal-in-react';
 import '../../utils/fonts.css';
 
 class TerminalApp extends Component {
+  siteDetails = () => 'This portfolio was built using React and Chakra UI with some custom CSS added here and there.'
+
   render() {
     return (
       <div
@@ -23,6 +25,7 @@ class TerminalApp extends Component {
           barColor='#43423D'
           style={{fontSize: "1em", fontFamily: "Ubuntu Mono"}}
           commands={{
+            'about-site': this.siteDetails,
             'whois': () => window.location.assign("/about"),
             'view-projects': () => window.location.assign("/projects"),
             'get-resume': () => window.location.assign("/resume"),
@@ -30,11 +33,12 @@ class TerminalApp extends Component {
             'linkedin': () => window.open('https://www.linkedin.com/in/mattbardal/', '_blank')
           }}
           descriptions={{
+            'about-site': 'About the website',
             'whois': 'Who is Matt?',
-            'view-projects': "View the projects I've built and worked on!",
-            'get-resume': "Opens my resume.",
-            'github': 'Opens my GitHub profile in a new tab.',
-            'linkedin': 'Opens my LinkedIn profile in a new tab.'
+            'view-projects': "View the projects I've built and worked on",
+            'get-resume': "Opens my resume",
+            'github': 'Opens my GitHub profile in a new tab',
+            'linkedin': 'Opens my LinkedIn profile in a new tab'
           }}
           prompt='#FFFFFF'
           promptSymbol="guest@mb:~$"

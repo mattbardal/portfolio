@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { Center } from '@chakra-ui/react'
 
 const Resume = () => {
     return(
-       <div className="resume"></div>
+       <Center className="resume" mt="15">I'll add this later...</Center>
     );
 }
 
