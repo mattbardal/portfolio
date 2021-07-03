@@ -1,14 +1,28 @@
 import React from 'react';
-import { Flex, Image, Box, ButtonGroup, IconButton  } from "@chakra-ui/react";
-import photo from "./assets/photo.jpg"
+import { Flex, Image, Box, ButtonGroup, IconButton, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Badge,Text } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
+import photo from "./assets/photo.jpg"
+import mcsnet from './assets/mcsnet.png'
 
 const About = () => {
     return(
         <div>
             <AboutHeader />
-            <WorkExperience />
+            <Flex paddingTop="5" mx="auto" maxW="7xl" px={{ base: '4' }} flexDirection={{ base: 'column', lg: 'row'}} alignItems={{base: 'center'}}>
+                <Box marginLeft="25" fontSize={{base: "28px", md: "32px"}} fontWeight="700">Work Experience</Box>
+            </Flex>
+            <Flex paddingTop="5" mx="auto" maxW="7xl" px={{ base: '4' }} flexDirection={{ base: 'column', lg: 'row'}}>
+                <Accordion allowToggle width="100%">
+                        <WorkExperience 
+                            logo={mcsnet} 
+                            company='MCSnet' 
+                            title='Student Programmer' 
+                            time="May 2021 - Present" 
+                            text="At MCSnet, my job is to help improve and work on numerous projects. These projects involve re-building their invoice generation software from Perl into PHP using FPDF, building React web-apps with Google Maps integration, and learning about the SNMP internet standard protocol."
+                            tags={['PHP', 'FPDF', 'React', '@react-google-maps/api', 'SQLite3', 'SNMP']} />
+                </Accordion>
+            </Flex>
         </div>
     );
 }
@@ -36,13 +50,33 @@ const AboutHeader = () => (
     </Flex>
 )
 
-const WorkExperience = () => (
-    <Flex paddingTop="5" mx="auto" maxW="7xl" px={{ base: '4' }} flexDirection={{ base: 'column', lg: 'row'}} alignItems={{base: 'center'}}>
-        <Box marginLeft="25" p="4">
-            <Box fontSize={{base: "30px", md: "36px"}} fontWeight="700">Work Experience</Box>
-            <Box backgroundColor="#2d3748">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Box>
-        </Box>
-    </Flex>
+const WorkExperience = ({logo, company, title, time, text, tags}) => (
+    <AccordionItem>
+      <h2>
+        <AccordionButton>
+          <Box flex="1" textAlign="left">
+            {company} - {title}
+          </Box>
+          <Box mr="3">{time}</Box>
+          <AccordionIcon />
+        </AccordionButton>
+      </h2>
+      <AccordionPanel pb={4}>
+        <Flex alignItems={{base: 'center'}}>
+            <Box marginRight="15" width={{md: '50%', lg: '25%'}}>
+                <Image src={logo} />
+            </Box>
+            <Text>
+                {text}
+                <Text paddingTop="2">
+                {tags.map((tag) => (
+                    <Badge variant="solid" backgroundColor="#C53030" borderRadius="5" p="1" mt="1" mr="2" fontSize="0.8em" >{tag}</Badge>
+                ))}
+                </Text>
+            </Text>
+        </Flex>
+      </AccordionPanel>
+    </AccordionItem>
 )
 
 export default About;

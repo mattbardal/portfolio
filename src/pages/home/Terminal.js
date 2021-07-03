@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import Terminal from 'terminal-in-react';
-import '../../fonts.css';
+import '../../utils/fonts.css';
 
 class TerminalApp extends Component {
-  showMsg = () => 'Hello World'
-
   render() {
     return (
       <div
         style={{
+          overflow: 'hidden',
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "75vh"
+          height: "75vh",
+          maxWidth: "1200px",
+          marginLeft: 'auto',
+          marginRight: 'auto',
         }}
       >
         <Terminal
@@ -21,14 +23,18 @@ class TerminalApp extends Component {
           barColor='#43423D'
           style={{fontSize: "1em", fontFamily: "Ubuntu Mono"}}
           commands={{
-            'open-google': () => window.open('https://www.google.com/', '_blank'),
-            showmsg: this.showMsg,
-            popup: () => alert('Terminal in React')
+            'whois': () => window.location.assign("/about"),
+            'view-projects': () => window.location.assign("/projects"),
+            'get-resume': () => window.location.assign("/resume"),
+            'github': () => window.open('https://github.com/mattbardal/', '_blank'),
+            'linkedin': () => window.open('https://www.linkedin.com/in/mattbardal/', '_blank')
           }}
           descriptions={{
-            'open-google': 'opens google.com',
-            showmsg: 'shows a message',
-            alert: 'alert', popup: 'alert'
+            'whois': 'Who is Matt?',
+            'view-projects': "View the projects I've built and worked on!",
+            'get-resume': "Opens my resume.",
+            'github': 'Opens my GitHub profile in a new tab.',
+            'linkedin': 'Opens my LinkedIn profile in a new tab.'
           }}
           prompt='#FFFFFF'
           promptSymbol="guest@mb:~$"

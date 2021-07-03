@@ -8,11 +8,10 @@ const theme = extendTheme({
       global: {
         // styles for the `body`
         body: {
-          bg: "gray.400",
+          bg: "gray.500", // could be 400
           color: "white",
           marginLeft: "auto",
           marginRight: "auto",
-          overflow: "hidden",
         },
         // styles for the `a`
         a: {

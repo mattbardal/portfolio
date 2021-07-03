@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../fonts.css';
+
 
 const Resume = () => {
     return(
-       <div className="resume">my resume!</div>
+       <div className="resume"></div>
     );
 }
 

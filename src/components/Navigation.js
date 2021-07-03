@@ -7,12 +7,11 @@ class Navigation extends React.Component {
     constructor(props) {
         super(props);
         this.state = {open: false};
-
         this.handleClick = this.handleClick.bind(this);
     }
     
     handleClick() {
-        const nav_icon = document.getElementById("nav-icon3");
+        const nav_icon = document.getElementById("nav-icon");
 
         if(this.state.open === true) {
             this.setState({open: false});
@@ -29,20 +28,17 @@ class Navigation extends React.Component {
                     <NavLink to="/" id="navlink-nav-center">[mb]</NavLink>
                 </Center>
                 <Spacer />
-                {/* <Center p="4" fontSize="18px" fontWeight="400"><NavLink to="/about">About Me</NavLink></Center>
-                <Center p="4" fontSize="18px" fontWeight="400"><NavLink to="/projects">Projects</NavLink></Center>
-                <Center p="4" fontSize="18px" fontWeight="400"><NavLink to="/resume">Resume</NavLink></Center> */}
-                <MenuLinks open={this.state.open} />
+                <NavigationLinks open={this.state.open} />
                 <Center px={{ base: '4', md: '8' }} display={{ base: "flex", md: "none" }} onClick={this.handleClick}>
-                    <MenuIcon open={this.state.open}/>
+                    <NavigationIcon open={this.state.open}/>
                 </Center>
             </Flex> 
         );
     }
 }
 
-const MenuIcon = () => (
-    <div id="nav-icon3" className="span-icon">
+const NavigationIcon = () => (
+    <div id="nav-icon" className="span-icon">
         <span class="span-icon"></span>
         <span class="span-icon"></span>
         <span class="span-icon"></span>
@@ -50,7 +46,7 @@ const MenuIcon = () => (
     </div>
 );
 
-const MenuLinks = ({ open }) => {
+const NavigationLinks = ({ open }) => {
     return (
         <Center
             display={{ base: open ? "block" : "none", md: "flex" }}

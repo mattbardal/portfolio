@@ -4,7 +4,7 @@ import { MdEmail } from 'react-icons/md'
 import { Text } from '@chakra-ui/layout'
 
 const Footer = () => (
-    <Box as="footer" role="contentinfo" mx="auto" maxW="7xl" py="16" px={{ base: '4', md: '8' }}>
+    <Box as="footer" role="contentinfo" mx="auto" maxW="7xl" paddingTop="16" px={{ base: '4', md: '8' }}>
         <Flex justify="space-between">
             <Text>
                 &copy; {new Date().getFullYear()} Matt Bardal
