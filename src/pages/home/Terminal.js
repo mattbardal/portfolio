@@ -26,9 +26,9 @@ class TerminalApp extends Component {
           style={{fontSize: "1em", fontFamily: "Ubuntu Mono"}}
           commands={{
             'about-site': this.siteDetails,
-            'whois': () => window.location.replace("/about"),
-            'view-projects': () => window.location.replace("/projects"),
-            'get-resume': () => window.location.replace("/resume"),
+            'whois': () => window.location.replace("/#/about"),
+            'view-projects': () => window.location.replace("/#/projects"),
+            'get-resume': () => window.location.replace("/#/resume"),
             'github': () => window.open('https://github.com/mattbardal/', '_blank'),
             'linkedin': () => window.open('https://www.linkedin.com/in/mattbardal/', '_blank')
           }}
