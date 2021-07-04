@@ -72,7 +72,7 @@ const Project = ({icon, icon_alt, time, title, subtitle, body, tags, imgs}) => (
         </Flex>
         <Flex flexDirection={{ base: 'column', lg: 'row'}} alignItems={{base: 'center'}}>
             {imgs.map((img) => (
-                <Image src={img} mt="15" mr="15" width="80%" />
+                <Image src={img} mt="15" mr="15" width="80%" minWidth='0' _hover={{transform: 'scale(1.5)'}} style={{transition: 'transform .2s'}} />
             ))}
         </Flex>
       </AccordionPanel>

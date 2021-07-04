@@ -13,10 +13,10 @@ class TerminalApp extends Component {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "75vh",
+          height: "75vh", 
           maxWidth: "1200px",
-          marginLeft: 'auto',
-          marginRight: 'auto',
+          marginLeft: "auto",
+          marginRight: "auto",
         }}
       >
         <Terminal
@@ -26,9 +26,9 @@ class TerminalApp extends Component {
           style={{fontSize: "1em", fontFamily: "Ubuntu Mono"}}
           commands={{
             'about-site': this.siteDetails,
-            'whois': () => window.location.assign("/about"),
-            'view-projects': () => window.location.assign("/projects"),
-            'get-resume': () => window.location.assign("/resume"),
+            'whois': () => window.location.replace("/about"),
+            'view-projects': () => window.location.replace("/projects"),
+            'get-resume': () => window.location.replace("/resume"),
             'github': () => window.open('https://github.com/mattbardal/', '_blank'),
             'linkedin': () => window.open('https://www.linkedin.com/in/mattbardal/', '_blank')
           }}
