@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.ff6732f0.chunk.css",
-    "main.js": "/static/js/main.1e406226.chunk.js",
-    "main.js.map": "/static/js/main.1e406226.chunk.js.map",
+    "main.js": "/static/js/main.f42ddebd.chunk.js",
+    "main.js.map": "/static/js/main.f42ddebd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b83279d6.js",
     "runtime-main.js.map": "/static/js/runtime-main.b83279d6.js.map",
-    "static/js/2.e2ea5542.chunk.js": "/static/js/2.e2ea5542.chunk.js",
-    "static/js/2.e2ea5542.chunk.js.map": "/static/js/2.e2ea5542.chunk.js.map",
+    "static/js/2.fe1e6818.chunk.js": "/static/js/2.fe1e6818.chunk.js",
+    "static/js/2.fe1e6818.chunk.js.map": "/static/js/2.fe1e6818.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.ff6732f0.chunk.css.map": "/static/css/main.ff6732f0.chunk.css.map",
-    "static/js/2.e2ea5542.chunk.js.LICENSE.txt": "/static/js/2.e2ea5542.chunk.js.LICENSE.txt",
+    "static/js/2.fe1e6818.chunk.js.LICENSE.txt": "/static/js/2.fe1e6818.chunk.js.LICENSE.txt",
     "static/media/astrosamurai_logo.0c599ec8.png": "/static/media/astrosamurai_logo.0c599ec8.png",
     "static/media/photo.784c7feb.jpg": "/static/media/photo.784c7feb.jpg",
     "static/media/planit_calendar.040da452.png": "/static/media/planit_calendar.040da452.png",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b83279d6.js",
-    "static/js/2.e2ea5542.chunk.js",
+    "static/js/2.fe1e6818.chunk.js",
     "static/css/main.ff6732f0.chunk.css",
-    "static/js/main.1e406226.chunk.js"
+    "static/js/main.f42ddebd.chunk.js"
   ]
 }
