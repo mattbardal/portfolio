@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Terminal from 'terminal-in-react';
+import { Center } from '@chakra-ui/layout';
 import '../../utils/fonts.css';
 
 class TerminalApp extends Component {
@@ -7,14 +8,15 @@ class TerminalApp extends Component {
 
   render() {
     return (
-      <div
+      <Center
         style={{
           overflow: 'hidden',
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "75vh", 
+          height: '100vh',
           maxWidth: "1200px",
+          maxHeight: "650px",
           marginLeft: "auto",
           marginRight: "auto",
         }}
@@ -46,7 +48,7 @@ class TerminalApp extends Component {
           actionHandlers={{handleClose: () => {} }}
           msg="Hey there — welcome to my interactive terminal-like portfolio. Type 'help' to see the commands!"
         />
-      </div>
+      </Center>
     );
   }
 }

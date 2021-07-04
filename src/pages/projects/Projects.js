@@ -11,9 +11,9 @@ import planit_calendar from './assets/planit_calendar.png'
 
 const Projects = () => {
     return (
-        <div>
+        <div style={{minHeight: 'calc(100vh - 205px)'}}>
             <Flex paddingTop="5" mx="auto" maxW="7xl" px={{ base: '4' }} flexDirection={{ base: 'column', lg: 'row'}} alignItems={{base: 'center'}}>
-                <Box marginLeft="25" fontSize={{base: "28px", md: "32px"}} fontWeight="700">Projects & Contributions</Box>
+                <Box textAlign="center" fontSize={{base: "28px", md: "32px"}} fontWeight="700">Projects & Contributions</Box>
             </Flex>
             <Flex paddingTop="5" mx="auto" maxW="7xl" px={{ base: '4' }} flexDirection={{ base: 'column', lg: 'row'}}>
                 <Accordion allowToggle width="100%">

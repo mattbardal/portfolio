@@ -3,7 +3,7 @@ import { Center } from '@chakra-ui/react'
 
 const Resume = () => {
     return(
-       <Center className="resume" mt="15">I'll add this later...</Center>
+       <Center className="resume" style={{minHeight: 'calc(100vh - 205px)'}}>I'll add this later...</Center>
     );
 }
 

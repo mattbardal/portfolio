@@ -7,10 +7,10 @@ import mcsnet from './assets/mcsnet.png'
 
 const About = () => {
     return(
-        <div>
+        <div style={{minHeight: 'calc(100vh - 205px)'}}>
             <AboutHeader />
             <Flex paddingTop="5" mx="auto" maxW="7xl" px={{ base: '4' }} flexDirection={{ base: 'column', lg: 'row'}} alignItems={{base: 'center'}}>
-                <Box marginLeft="25" fontSize={{base: "28px", md: "32px"}} fontWeight="700">Work Experience</Box>
+                <Box fontSize={{base: "28px", md: "32px"}} fontWeight="700">Work Experience</Box>
             </Flex>
             <Flex paddingTop="5" mx="auto" maxW="7xl" px={{ base: '4' }} flexDirection={{ base: 'column', lg: 'row'}}>
                 <Accordion allowToggle width="100%">
