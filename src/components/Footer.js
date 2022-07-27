@@ -6,7 +6,7 @@ import { Text } from '@chakra-ui/layout';
 const Footer = () => (
   <Box as="footer" role="contentinfo" mx="auto" maxW="7xl" pt="8" px={{ base: '4', md: '8' }}>
     <Flex justify="space-between">
-      <Text>&copy; {new Date().getFullYear()} Matt Bardal</Text>
+      <Text>&copy; {new Date().getFullYear()} Matthieu Bardal</Text>
       <SocialMediaLinks />
     </Flex>
   </Box>

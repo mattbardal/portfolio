@@ -13,15 +13,15 @@ import {
   Badge,
   Text
 } from '@chakra-ui/react';
+import PropTypes from 'prop-types';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import PropTypes from 'prop-types';
+import { AiFillFilePdf } from 'react-icons/ai';
 import photo from './assets/photo.jpg';
-import mcsnet from './assets/mcsnet.png';
 
 const About = () => {
   return (
-    <div style={{ minHeight: 'calc(100vh - 205px)' }}>
+    <div>
       <AboutHeader />
       <Flex
         paddingTop="5"
@@ -42,12 +42,18 @@ const About = () => {
         flexDirection={{ base: 'column', lg: 'row' }}>
         <Accordion allowToggle width="100%">
           <WorkExperience
-            logo={mcsnet}
             company="MCSnet"
             title="Student Programmer"
-            time="May 2021 - Present"
+            time="May 2021 - August 2021"
             text="At MCSnet, my job is to help improve and work on numerous projects. These projects involve re-building their invoice generation software from Perl into PHP using FPDF, building React web-apps with Google Maps integration, and learning about the SNMP internet standard protocol."
             tags={['PHP', 'FPDF', 'React', '@react-google-maps/api', 'SQLite3', 'SNMP']}
+          />
+          <WorkExperience
+            company="Shopify"
+            title="Developer Intern"
+            time="May 2022 - August 2022"
+            text=""
+            tags={['Ruby on Rails', 'Go', 'Kubernetes', 'StimulusJS', 'RSpec']}
           />
         </Accordion>
       </Flex>
@@ -57,7 +63,6 @@ const About = () => {
 
 const AboutHeader = () => (
   <Flex
-    paddingTop="5"
     mx="auto"
     maxW="7xl"
     px={{ base: '4' }}
@@ -67,18 +72,15 @@ const AboutHeader = () => (
       <Image src={photo} alt="Matthieu Bardal" borderRadius="full" border="2px solid white" />
     </Box>
     <Box marginLeft="25" p="4">
-      <Box fontSize={{ base: '48px', md: '52px' }} fontWeight="700">
-        Hey, I&apos;m Matt!
+      <Box fontSize={{ base: '32px', md: '48px' }} fontWeight="700">
+        Hi there, my name is Matthieu.
       </Box>
       <Box fontSize={{ base: '16px', md: '18px' }} marginRight="5">
-        I&apos;m a student and developer with a passion for learning. I am currently in my third
-        year of Computer Science studying at Mount Royal University in Calgary. Growing up,
-        I&apos;ve always had an interest in learning about computers and how they work as well as
-        programming them. You can get in touch with me through email (
-        <a href="mailto:mattbardal@gmail.com" style={{ color: '#2D3748', fontWeight: '700' }}>
-          mattbardal@gmail.com
-        </a>
-        ) or find me on the networks below.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget bibendum risus. Integer
+        pharetra nibh in sem finibus, eu dignissim nisi scelerisque. Vestibulum pharetra, justo quis
+        consectetur dictum, diam enim sollicitudin nisl, et condimentum nisi arcu ac ante. Morbi
+        feugiat erat nec leo laoreet mattis. Curabitur feugiat volutpat felis, a scelerisque diam
+        congue consectetur.
       </Box>
       <Box>
         <ButtonGroup variant="unstyled" color="white" marginTop="5">
@@ -103,13 +105,20 @@ const AboutHeader = () => (
             aria-label="GitHub"
             icon={<FaGithub fontSize="28px" />}
           />
+          <IconButton
+            as="a"
+            href="#"
+            target="_blank"
+            aria-label="GitHub"
+            icon={<AiFillFilePdf fontSize="28px" />}
+          />
         </ButtonGroup>
       </Box>
     </Box>
   </Flex>
 );
 
-const WorkExperience = ({ logo, company, title, time, text, tags }) => (
+const WorkExperience = ({ company, title, time, text, tags }) => (
   <AccordionItem>
     <h2>
       <AccordionButton>
@@ -122,15 +131,12 @@ const WorkExperience = ({ logo, company, title, time, text, tags }) => (
     </h2>
     <AccordionPanel pb={4}>
       <Flex alignItems={{ base: 'center' }}>
-        <Box marginRight="15" width={{ md: '50%', lg: '25%' }}>
-          <Image src={logo} />
-        </Box>
         <Text>
           {text}
           <Text paddingTop="2">
-            {tags.map((tag) => (
+            {tags.map((tag, index) => (
               <Badge
-                key={tag}
+                key={index}
                 variant="solid"
                 backgroundColor="#C53030"
                 borderRadius="5"
@@ -148,7 +154,6 @@ const WorkExperience = ({ logo, company, title, time, text, tags }) => (
   </AccordionItem>
 );
 WorkExperience.propTypes = {
-  logo: PropTypes.Image,
   company: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,

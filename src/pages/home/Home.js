@@ -1,15 +1,16 @@
 import React from 'react';
-import TerminalApp from './Terminal';
-import { Center } from '@chakra-ui/layout';
+import { Flex, Box } from '@chakra-ui/layout';
+
+import About from '../about/About';
+import Projects from '../projects/Projects';
 
 const Home = () => {
   return (
-    <div style={{ minHeight: 'calc(100vh - 205px)' }}>
-      <TerminalApp />
-      <Center mt="15" p="4" fontSize="1.25em" textAlign="center">
-        You can use the terminal to get around the page or use the navigation bar at the top!
-      </Center>
-    </div>
+    <Flex flexDirection={'column'} marginTop="25" mx="auto" maxW="7xl" px={{ base: '4' }}>
+      <About />
+      <Box marginTop="40px" />
+      <Projects />
+    </Flex>
   );
 };
 

@@ -9,9 +9,13 @@ import {
   AccordionPanel,
   AccordionIcon,
   Badge,
-  Text
+  Text,
+  Center
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 import astrosamurai_logo from './assets/astrosamurai_logo.png';
 import astro_title from './assets/astrosamurai_title.png';
@@ -23,7 +27,7 @@ import planit_calendar from './assets/planit_calendar.png';
 
 const Projects = () => {
   return (
-    <div style={{ minHeight: 'calc(100vh - 205px)' }}>
+    <div>
       <Flex
         paddingTop="5"
         mx="auto"
@@ -80,10 +84,10 @@ const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs }) =>
       </AccordionButton>
     </h2>
     <AccordionPanel pb={4}>
+      <Center>
+        <Image mb="15px" width="150px" src={icon} alt={icon_alt} />
+      </Center>
       <Flex alignItems={{ base: 'center' }}>
-        <Box marginRight="15" width={{ md: '50%', lg: '40%' }}>
-          <Image src={icon} alt={icon_alt} />
-        </Box>
         <Text>
           {body}
           <Text paddingTop="2">
@@ -103,19 +107,16 @@ const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs }) =>
           </Text>
         </Text>
       </Flex>
-      <Flex flexDirection={{ base: 'column', lg: 'row' }} alignItems={{ base: 'center' }}>
-        {imgs.map((img, index) => (
-          <Image
-            key={index}
-            src={img}
-            mt="15"
-            mr="15"
-            width="80%"
-            minWidth="0"
-            _hover={{ transform: 'scale(1.5)' }}
-            style={{ transition: 'transform .2s' }}
-          />
-        ))}
+      <Flex
+        flexDirection={{ base: 'column', lg: 'row' }}
+        marginLeft="auto"
+        marginRight="auto"
+        alignItems={{ base: 'center' }}>
+        <Carousel infiniteLoop width="65%">
+          {imgs.map((img, index) => (
+            <Image key={index} src={img} mt="15" />
+          ))}
+        </Carousel>
       </Flex>
     </AccordionPanel>
   </AccordionItem>
