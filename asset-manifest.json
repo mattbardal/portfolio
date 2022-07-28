@@ -1,25 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.ff6732f0.chunk.css",
-    "main.js": "/static/js/main.444d7173.chunk.js",
-    "main.js.map": "/static/js/main.444d7173.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b83279d6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b83279d6.js.map",
-    "static/js/2.c71abcc5.chunk.js": "/static/js/2.c71abcc5.chunk.js",
-    "static/js/2.c71abcc5.chunk.js.map": "/static/js/2.c71abcc5.chunk.js.map",
+    "main.css": "/static/css/main.158f5d77.css",
+    "main.js": "/static/js/main.68b7190b.js",
+    "static/media/photo.jpeg": "/static/media/photo.2799134d405ff074fa39.jpeg",
+    "static/media/bltnbrd_screenshot.png": "/static/media/bltnbrd_screenshot.028f79f6991363916846.png",
+    "static/media/planit_logo.png": "/static/media/planit_logo.9d98176caae975e5f9a2.png",
+    "static/media/planit_calendar.png": "/static/media/planit_calendar.040da4529332749fa4c0.png",
+    "static/media/planit_main.png": "/static/media/planit_main.f165f99deb76a6228fb7.png",
+    "static/media/astrosamurai_logo.png": "/static/media/astrosamurai_logo.0c599ec8534418f8a826.png",
     "index.html": "/index.html",
-    "static/css/main.ff6732f0.chunk.css.map": "/static/css/main.ff6732f0.chunk.css.map",
-    "static/js/2.c71abcc5.chunk.js.LICENSE.txt": "/static/js/2.c71abcc5.chunk.js.LICENSE.txt",
-    "static/media/astrosamurai_logo.0c599ec8.png": "/static/media/astrosamurai_logo.0c599ec8.png",
-    "static/media/photo.784c7feb.jpg": "/static/media/photo.784c7feb.jpg",
-    "static/media/planit_calendar.040da452.png": "/static/media/planit_calendar.040da452.png",
-    "static/media/planit_logo.9d98176c.png": "/static/media/planit_logo.9d98176c.png",
-    "static/media/planit_main.f165f99d.png": "/static/media/planit_main.f165f99d.png"
+    "main.158f5d77.css.map": "/static/css/main.158f5d77.css.map",
+    "main.68b7190b.js.map": "/static/js/main.68b7190b.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.b83279d6.js",
-    "static/js/2.c71abcc5.chunk.js",
-    "static/css/main.ff6732f0.chunk.css",
-    "static/js/main.444d7173.chunk.js"
+    "static/css/main.158f5d77.css",
+    "static/js/main.68b7190b.js"
   ]
 }
