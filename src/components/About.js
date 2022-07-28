@@ -11,12 +11,13 @@ import {
   AccordionPanel,
   AccordionIcon,
   Badge,
-  Text
+  Text,
+  Link
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { AiFillFilePdf } from 'react-icons/ai';
+// import { AiFillFilePdf } from 'react-icons/ai';
 import photo from '../assets/photo.jpeg';
 
 const About = () => {
@@ -45,14 +46,22 @@ const About = () => {
             company="MCSnet"
             title="Student Programmer"
             time="May 2021 - August 2021"
-            text=""
-            tags={['PHP', 'FPDF', 'React', '@react-google-maps/api', 'SQLite3', 'SNMP']}
+            text="Worked on numerous development projects ranging from internal tooling to public-facing React apps. This includes deprecating an old Perl invoice generation/document rendering script and re-implementing it with PHP using FPDF, building React web-apps with Google Maps integration, learning about the SNMP internet standard protocol and having the opportunity to write small scripts that interact with SQLite3 databases."
+            tags={[
+              'PHP',
+              'FPDF',
+              'React',
+              'Material-UI',
+              '@react-google-maps/api',
+              'SQLite3',
+              'SNMP'
+            ]}
           />
           <WorkExperience
             company="Shopify"
             title="Developer Intern"
             time="May 2022 - August 2022"
-            text=""
+            text="// To-do: update at end of internship"
             tags={['Ruby on Rails', 'Go', 'Kubernetes', 'StimulusJS', 'RSpec']}
           />
         </Accordion>
@@ -76,11 +85,14 @@ const AboutHeader = () => (
         Hi there, my name is Matthieu.
       </Box>
       <Box fontSize={{ base: '16px', md: '18px' }} marginRight="5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget bibendum risus. Integer
-        pharetra nibh in sem finibus, eu dignissim nisi scelerisque. Vestibulum pharetra, justo quis
-        consectetur dictum, diam enim sollicitudin nisl, et condimentum nisi arcu ac ante. Morbi
-        feugiat erat nec leo laoreet mattis. Curabitur feugiat volutpat felis, a scelerisque diam
-        congue consectetur.
+        I&apos;m a student and developer with a passion for learning. I am currently in my fourth
+        year pursuing a Bachelors of Science in Computer Science at Mount Royal University. I made
+        this website as a way to showcase some of my projects and past experience. If you would like
+        to get in touch with me, you can reach me at
+        <Link as="a" href="mailto:mattbardal@gmail.com" fontWeight="700">
+          mattbardal@gmail.com
+        </Link>{' '}
+        or find me on the networks below.
       </Box>
       <Box>
         <ButtonGroup variant="unstyled" color="white" marginTop="5">
@@ -105,13 +117,13 @@ const AboutHeader = () => (
             aria-label="GitHub"
             icon={<FaGithub fontSize="28px" />}
           />
-          <IconButton
+          {/* <IconButton
             as="a"
             href="#"
             target="_blank"
-            aria-label="GitHub"
+            aria-label="CV"
             icon={<AiFillFilePdf fontSize="28px" />}
-          />
+          /> */}
         </ButtonGroup>
       </Box>
     </Box>
@@ -123,7 +135,7 @@ const WorkExperience = ({ company, title, time, text, tags }) => (
     <h2>
       <AccordionButton>
         <Box flex="1" textAlign="left">
-          {company} - {title}
+          <span style={{ fontWeight: '700' }}>{company}</span> - {title}
         </Box>
         <Box mr="3">{time}</Box>
         <AccordionIcon />

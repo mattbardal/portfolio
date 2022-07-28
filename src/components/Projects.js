@@ -11,12 +11,18 @@ import {
   Badge,
   Text,
   Center,
-  Container
+  Container,
+  Button,
+  ButtonGroup
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+import '../utils/style.css';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+
+import { FiExternalLink } from 'react-icons/fi';
+import { FaGithub } from 'react-icons/fa';
 
 import astrosamurai_logo from '../assets/astrosamurai_logo.png';
 import astro_title from '../assets/astrosamurai_title.png';
@@ -29,6 +35,7 @@ import planit_calendar from '../assets/planit_calendar.png';
 import ttfm_logo from '../assets/ttfm.png';
 
 import bltnbrd_logo from '../assets/bltnbrd_logo.png';
+import bltnbrd_screenshot from '../assets/bltnbrd_screenshot.png';
 
 const Projects = () => {
   return (
@@ -58,8 +65,9 @@ const Projects = () => {
             title="AstroSamurai"
             subtitle="a video game built for the Atari ST"
             tags={['C', 'M68k Assembly', 'Git']}
-            body=""
+            body="Astro Samurai is a singleplayer, side-view, 2D platform survival game where you defend the galaxy from aliens as an Astronaut-samurai with a katana. AstroSamurai was created by myself and another student as part of our COMP 2659: Computing Machinery II class during the Winter 2021 semester. The goal of this project was to learn more about how software interacts with computer hardware."
             imgs={[astro_title, astro_game]}
+            links={[]}
           />
           <Project
             icon={planit_logo}
@@ -68,8 +76,9 @@ const Projects = () => {
             title="Planit"
             subtitle="an academic planner and course organizer"
             tags={['Python', 'Django', 'HTML', 'CSS', 'JavaScript', 'Git']}
-            body=""
+            body="Planit is a todo list, calendar, and academic/semester planner that was built by me and a couple other students at MRU using Django, a web-based python framework. This project was created for the COMP 2633: Foundations of Software Engineering class during the Winter 2021 semester.The goal of this project was to challenge ourselves to learn a new framework while also meeting the expectations of designing a project from scratch following proper software engineering principles."
             imgs={[planit_main, planit_calendar]}
+            links={[]}
           />
           <Project
             icon={ttfm_logo}
@@ -77,9 +86,16 @@ const Projects = () => {
             time="Summer 2021"
             title="tt.fm+"
             subtitle="a better way to turn tables"
-            tags={['TypeScript', 'Chrome Extension', 'Git']}
-            body=""
+            tags={['React', 'TypeScript', 'Chakra UI', 'Chrome Extension', 'Git']}
+            body="tt.fm+ is a chrome web extension that provides quality of life improvements such as night mode, auto liking songs, and the use of third party emoticons within turntable.fm/. In the future, I would like to allow users to add their own custom emotes through a custom API, import playlists from Spotify, and port the extension to Firefox."
             imgs={[]}
+            links={[
+              {
+                url: 'https://github.com/keithradford/ttfm-plus',
+                value: 'GitHub',
+                icon: <FaGithub />
+              }
+            ]}
           />
           <Project
             icon={bltnbrd_logo}
@@ -87,9 +103,35 @@ const Projects = () => {
             time="Calgary Hacks 2022"
             title="bltnbrd.online"
             subtitle="an online bulletin board"
-            tags={['TypeScript', 'Chrome Extension', 'Git']}
-            body=""
-            imgs={[]}
+            tags={[
+              'React',
+              'TypeScript',
+              'Chakra UI',
+              'Node',
+              'Express',
+              'MongoDB',
+              'Auth0',
+              'Google Maps API'
+            ]}
+            body="BltnBrd is a bulletin board web app to keep everyone connected just like the bulletin boards at your local convenience stores or community centers. Maintain a sense of community and live a healthier life. This web app was created during the Calgary Hacks 2022 hackathon with three other team members. You can learn more and see it in action from the links below."
+            imgs={[bltnbrd_screenshot]}
+            links={[
+              {
+                url: 'https://bltnbrd.online/',
+                value: 'bltnbrd.online',
+                icon: <FiExternalLink />
+              },
+              {
+                url: 'https://devpost.com/software/bltnbrd',
+                value: 'Calgary Hacks 2022 Devpost',
+                icon: <FiExternalLink />
+              },
+              {
+                url: 'https://github.com/Sean-Jamieson/bulletinboard',
+                value: 'GitHub',
+                icon: <FaGithub />
+              }
+            ]}
           />
         </Accordion>
       </Flex>
@@ -97,7 +139,7 @@ const Projects = () => {
   );
 };
 
-const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs }) => (
+const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs, links }) => (
   <AccordionItem>
     <h2>
       <AccordionButton>
@@ -132,6 +174,15 @@ const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs }) =>
           </Text>
         </Text>
       </Flex>
+      <ButtonGroup
+        flexDirection={{ base: 'column', md: 'row' }}
+        variant="unstyled"
+        color="white"
+        mt="25px">
+        {links.map((link, index) => (
+          <ProjectLinks key={index} link={link} />
+        ))}
+      </ButtonGroup>
       <Container maxW="800px" alignContent="center">
         <Carousel infiniteLoop>
           {imgs.map((img, index) => (
@@ -150,7 +201,26 @@ Project.propTypes = {
   subtitle: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
-  imgs: PropTypes.string.isRequired
+  imgs: PropTypes.string.isRequired,
+  links: PropTypes.array.isRequired
+};
+
+const ProjectLinks = ({ link }) => (
+  <Button
+    as="a"
+    className="buttonGroup-a"
+    href={link.url}
+    target="_blank"
+    aria-label={link.value}
+    leftIcon={link.icon}
+    marginInlineStart="0"
+    mr={{ base: '0', md: '15px' }}>
+    {link.value}
+  </Button>
+);
+
+ProjectLinks.propTypes = {
+  link: PropTypes.object.isRequired
 };
 
 export default Projects;
