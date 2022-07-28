@@ -88,7 +88,13 @@ const Projects = () => {
             tags={['React', 'TypeScript', 'Chakra UI', 'Chrome Extension', 'Git']}
             body="tt.fm+ is a chrome web extension that provides quality of life improvements such as night mode, auto liking songs, and the use of third party emoticons within turntable.fm/. In the future, I would like to allow users to add their own custom emotes through a custom API, import playlists from Spotify, and port the extension to Firefox."
             imgs={[]}
-            links={[]}
+            links={[
+              {
+                url: 'https://github.com/keithradford/ttfm-plus',
+                value: 'GitHub',
+                icon: <FaGithub />
+              }
+            ]}
           />
           <Project
             icon={bltnbrd_logo}

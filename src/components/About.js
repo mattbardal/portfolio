@@ -127,7 +127,7 @@ const WorkExperience = ({ company, title, time, text, tags }) => (
     <h2>
       <AccordionButton>
         <Box flex="1" textAlign="left">
-          {company} - {title}
+          <span style={{ fontWeight: '700' }}>{company}</span> - {title}
         </Box>
         <Box mr="3">{time}</Box>
         <AccordionIcon />
