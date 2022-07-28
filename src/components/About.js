@@ -11,7 +11,8 @@ import {
   AccordionPanel,
   AccordionIcon,
   Badge,
-  Text
+  Text,
+  Link
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -76,11 +77,14 @@ const AboutHeader = () => (
         Hi there, my name is Matthieu.
       </Box>
       <Box fontSize={{ base: '16px', md: '18px' }} marginRight="5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget bibendum risus. Integer
-        pharetra nibh in sem finibus, eu dignissim nisi scelerisque. Vestibulum pharetra, justo quis
-        consectetur dictum, diam enim sollicitudin nisl, et condimentum nisi arcu ac ante. Morbi
-        feugiat erat nec leo laoreet mattis. Curabitur feugiat volutpat felis, a scelerisque diam
-        congue consectetur.
+        I&apos;m a student and developer with a passion for learning. I am currently in my fourth
+        year pursuing a Bachelors of Science in Computer Science at Mount Royal University. I made
+        this website as a way to showcase some of my projects and past experience. If you would like
+        to get in touch with me, you can reach me at
+        <Link as="a" href="mailto:mattbardal@gmail.com" fontWeight="700">
+          mattbardal@gmail.com
+        </Link>{' '}
+        or find me on the networks below.
       </Box>
       <Box>
         <ButtonGroup variant="unstyled" color="white" marginTop="5">
