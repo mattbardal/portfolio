@@ -16,7 +16,7 @@ import {
 import PropTypes from 'prop-types';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { AiFillFilePdf } from 'react-icons/ai';
+// import { AiFillFilePdf } from 'react-icons/ai';
 import photo from '../assets/photo.jpeg';
 
 const About = () => {
@@ -105,13 +105,13 @@ const AboutHeader = () => (
             aria-label="GitHub"
             icon={<FaGithub fontSize="28px" />}
           />
-          <IconButton
+          {/* <IconButton
             as="a"
             href="#"
             target="_blank"
-            aria-label="GitHub"
+            aria-label="CV"
             icon={<AiFillFilePdf fontSize="28px" />}
-          />
+          /> */}
         </ButtonGroup>
       </Box>
     </Box>
