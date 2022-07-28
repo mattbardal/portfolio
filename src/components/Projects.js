@@ -16,6 +16,7 @@ import {
   ButtonGroup
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+import '../utils/style.css';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -173,7 +174,11 @@ const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs, link
           </Text>
         </Text>
       </Flex>
-      <ButtonGroup flexDirection="column" variant="unstyled" color="white" mt="25px">
+      <ButtonGroup
+        flexDirection={{ base: 'column', md: 'row' }}
+        variant="unstyled"
+        color="white"
+        mt="25px">
         {links.map((link, index) => (
           <ProjectLinks key={index} link={link} />
         ))}
@@ -203,6 +208,7 @@ Project.propTypes = {
 const ProjectLinks = ({ link }) => (
   <Button
     as="a"
+    className="buttonGroup-a"
     href={link.url}
     target="_blank"
     aria-label={link.value}
@@ -214,7 +220,7 @@ const ProjectLinks = ({ link }) => (
 );
 
 ProjectLinks.propTypes = {
-  link: PropTypes.array.isRequired
+  link: PropTypes.object.isRequired
 };
 
 export default Projects;

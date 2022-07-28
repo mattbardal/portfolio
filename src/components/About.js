@@ -46,14 +46,22 @@ const About = () => {
             company="MCSnet"
             title="Student Programmer"
             time="May 2021 - August 2021"
-            text=""
-            tags={['PHP', 'FPDF', 'React', '@react-google-maps/api', 'SQLite3', 'SNMP']}
+            text="Worked on numerous development projects ranging from internal tooling to public-facing React apps. This includes deprecating an old Perl invoice generation/document rendering script and re-implementing it with PHP using FPDF, building React web-apps with Google Maps integration, learning about the SNMP internet standard protocol and having the opportunity to write small scripts that interact with SQLite3 databases."
+            tags={[
+              'PHP',
+              'FPDF',
+              'React',
+              'Material-UI',
+              '@react-google-maps/api',
+              'SQLite3',
+              'SNMP'
+            ]}
           />
           <WorkExperience
             company="Shopify"
             title="Developer Intern"
             time="May 2022 - August 2022"
-            text=""
+            text="// To-do: update at end of internship"
             tags={['Ruby on Rails', 'Go', 'Kubernetes', 'StimulusJS', 'RSpec']}
           />
         </Accordion>
