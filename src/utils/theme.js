@@ -4,11 +4,14 @@ const theme = extendTheme({
   fonts: {
     body: 'Comfortaa'
   },
+  colors: {
+    bgColor: '#111'
+  },
   styles: {
     global: {
       // styles for the `body`
       body: {
-        bg: 'gray.500', // could be 400
+        bg: 'bgColor',
         color: 'white',
         marginLeft: 'auto',
         marginRight: 'auto'
@@ -16,8 +19,12 @@ const theme = extendTheme({
       // styles for the `a`
       a: {
         color: 'white',
+        paddingTop: '5px',
+        paddingBottom: '5px',
+        paddingLeft: '12px',
+        paddingRight: '12px',
         _hover: {
-          color: 'gray.700'
+          color: 'rgba(111,123,247,1)'
         }
       }
     }
