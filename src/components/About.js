@@ -88,8 +88,8 @@ const AboutHeader = () => (
         I&apos;m a student and developer with a passion for learning. I am currently in my fourth
         year pursuing a Bachelors of Science in Computer Science at Mount Royal University. I made
         this website as a way to showcase some of my projects and past experience. If you would like
-        to get in touch with me, you can reach me at
-        <Link as="a" href="mailto:mattbardal@gmail.com" fontWeight="700">
+        to get in touch with me, you can reach me at{' '}
+        <Link as="a" href="mailto:mattbardal@gmail.com" fontWeight="700" padding="0">
           mattbardal@gmail.com
         </Link>{' '}
         or find me on the networks below.
