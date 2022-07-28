@@ -24,9 +24,7 @@ const theme = extendTheme({
         paddingLeft: '12px',
         paddingRight: '12px',
         _hover: {
-          background: 'linear-gradient(90deg, rgba(155,248,244,1) 0%, rgba(111,123,247,1) 100%);',
-          backgroundClip: 'text',
-          textFillColor: 'transparent'
+          color: 'rgba(111,123,247,1)'
         }
       }
     }
