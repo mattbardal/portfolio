@@ -10,7 +10,8 @@ import {
   AccordionIcon,
   Badge,
   Text,
-  Center
+  Center,
+  Container
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
@@ -107,17 +108,13 @@ const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs }) =>
           </Text>
         </Text>
       </Flex>
-      <Flex
-        flexDirection={{ base: 'column', lg: 'row' }}
-        marginLeft="auto"
-        marginRight="auto"
-        alignItems={{ base: 'center' }}>
-        <Carousel infiniteLoop width="65%">
+      <Container maxW="800px" alignContent="center">
+        <Carousel infiniteLoop>
           {imgs.map((img, index) => (
             <Image key={index} src={img} mt="15" />
           ))}
         </Carousel>
-      </Flex>
+      </Container>
     </AccordionPanel>
   </AccordionItem>
 );
