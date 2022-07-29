@@ -155,7 +155,7 @@ const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs, link
         <Image mb="15px" width="175px" src={icon} alt={icon_alt} />
       </Center>
       <Flex alignItems={{ base: 'center' }}>
-        <Text>
+        <Box>
           {body}
           <Text paddingTop="2">
             {tags.map((tag, index) => (
@@ -172,7 +172,7 @@ const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs, link
               </Badge>
             ))}
           </Text>
-        </Text>
+        </Box>
       </Flex>
       <ButtonGroup
         flexDirection={{ base: 'column', md: 'row' }}
@@ -186,7 +186,7 @@ const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs, link
       <Container maxW="800px" alignContent="center">
         <Carousel infiniteLoop>
           {imgs.map((img, index) => (
-            <Image key={index} src={img} mt="15" />
+            <img key={index} src={img} mt="15" />
           ))}
         </Carousel>
       </Container>
@@ -194,14 +194,14 @@ const Project = ({ icon, icon_alt, time, title, subtitle, body, tags, imgs, link
   </AccordionItem>
 );
 Project.propTypes = {
-  icon: PropTypes.Image,
+  icon: PropTypes.string.isRequired,
   icon_alt: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
-  imgs: PropTypes.string.isRequired,
+  imgs: PropTypes.array.isRequired,
   links: PropTypes.array.isRequired
 };
 

@@ -143,7 +143,7 @@ const WorkExperience = ({ company, title, time, text, tags }) => (
     </h2>
     <AccordionPanel pb={4}>
       <Flex alignItems={{ base: 'center' }}>
-        <Text>
+        <Box>
           {text}
           <Text paddingTop="2">
             {tags.map((tag, index) => (
@@ -160,7 +160,7 @@ const WorkExperience = ({ company, title, time, text, tags }) => (
               </Badge>
             ))}
           </Text>
-        </Text>
+        </Box>
       </Flex>
     </AccordionPanel>
   </AccordionItem>
@@ -170,7 +170,7 @@ WorkExperience.propTypes = {
   title: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  tags: PropTypes.string.isRequired
+  tags: PropTypes.array.isRequired
 };
 
 export default About;
