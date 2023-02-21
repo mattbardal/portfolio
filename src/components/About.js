@@ -61,8 +61,22 @@ const About = () => {
             company="Shopify"
             title="Developer Intern"
             time="May 2022 - August 2022"
-            text="// To-do: update at end of internship"
+            text="// To-do"
             tags={['Ruby on Rails', 'Go', 'Kubernetes', 'StimulusJS', 'RSpec']}
+          />
+          <WorkExperience
+            company="Mount Royal University"
+            title="Research Assistant"
+            time="October 2022 - January 2023"
+            text="// To-do"
+            tags={[
+              'Python',
+              'Machine Learning',
+              'Reinforcement Learning',
+              'Gymnasium',
+              'Numpy',
+              'Matplotlib'
+            ]}
           />
         </Accordion>
       </Flex>
