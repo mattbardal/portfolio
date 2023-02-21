@@ -1,19 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.158f5d77.css",
-    "main.js": "/static/js/main.835aa327.js",
+    "main.js": "/static/js/main.b874fc59.js",
     "static/media/photo.jpeg": "/static/media/photo.2799134d405ff074fa39.jpeg",
     "static/media/bltnbrd_screenshot.png": "/static/media/bltnbrd_screenshot.028f79f6991363916846.png",
+    "static/media/ginius-3.png": "/static/media/ginius-3.87be2f31913e31053b3e.png",
+    "static/media/ginius-2.png": "/static/media/ginius-2.6a12eb4ea16595067df3.png",
+    "static/media/ginius.gif": "/static/media/ginius.8489883a0fa69a619e97.gif",
     "static/media/planit_logo.png": "/static/media/planit_logo.9d98176caae975e5f9a2.png",
     "static/media/planit_calendar.png": "/static/media/planit_calendar.040da4529332749fa4c0.png",
     "static/media/planit_main.png": "/static/media/planit_main.f165f99deb76a6228fb7.png",
     "static/media/astrosamurai_logo.png": "/static/media/astrosamurai_logo.0c599ec8534418f8a826.png",
     "index.html": "/index.html",
     "main.158f5d77.css.map": "/static/css/main.158f5d77.css.map",
-    "main.835aa327.js.map": "/static/js/main.835aa327.js.map"
+    "main.b874fc59.js.map": "/static/js/main.b874fc59.js.map"
   },
   "entrypoints": [
     "static/css/main.158f5d77.css",
-    "static/js/main.835aa327.js"
+    "static/js/main.b874fc59.js"
   ]
 }
