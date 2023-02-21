@@ -80,7 +80,7 @@ const Projects = () => {
             title="Planit"
             subtitle="an academic planner and course organizer"
             tags={['Python', 'Django', 'HTML', 'CSS', 'JavaScript', 'Git']}
-            body="Planit is a todo list, calendar, and academic/semester planner that was built by me and a couple other students at MRU using Django, a web-based python framework. This project was created for the COMP 2633: Foundations of Software Engineering class during the Winter 2021 semester. The goal of this project was to challenge ourselves to learn a new framework while also meeting the expectations of designing a project from scratch following proper software engineering principles."
+            body="Planit is a todo list, calendar, and academic/semester planner that was built by me and a couple other students at MRU using Django, a web-based python framework. This project was created for the COMP 2633: Foundations of Software Engineering class during the Winter 2021 semester.The goal of this project was to challenge ourselves to learn a new framework while also meeting the expectations of designing a project from scratch following proper software engineering principles."
             imgs={[planit_main, planit_calendar]}
             links={[]}
           />
@@ -142,7 +142,7 @@ const Projects = () => {
             title="ginius"
             subtitle="an interactive predictive model for gini indices"
             tags={['React', 'TypeScript', 'Chakra UI', 'Flask', 'Recharts', 'Scikit-Learn']}
-            body="Our goal for this hackathon was to create a single page web application that could demonstrate the value of education in society.Ginius leverages data from The World Bank data catalog, and uses two trained regression machine learning models to predict future income inequality (GINI index) based upon national educational statistics. This data is then visualized and the user is given the opportunity to explore how different factors can manipulate that prediction.This web app was created during the Calgary Hacks 2023 hackathon with four other team members. You can learn more and see it in action from the links below."
+            body="Our goal for this hackathon was to create a single page web application that could demonstrate the value of education in society.Ginius leverages data from The World Bank data catalog, and uses two trained regression machine learning models to predict future income inequality (GINI index) based upon national educational statistics. This data is then visualized and the user is given the opportunity to explore how different factors can manipulate that prediction. This web app was created during the Calgary Hacks 2023 hackathon with four other team members. You can learn more and see it in action from the links below."
             imgs={[ginius_gif, ginius_screenshot, ginius_screenshot_2]}
             links={[
               {
